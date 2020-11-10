@@ -12,7 +12,7 @@ Ladosz, Pawel, et al. "Deep Reinforcement Learning with Modulated Hebbian plus Q
 **link:** [https://arxiv.org/abs/1909.09902](https://arxiv.org/abs/1909.09902)
 
 # なぜ読もうと思ったか？
-Modulated Hebbian learningとDQNを組み合わた新しい学習パラダイムだったので．
+Modulated Hebbian learningとDQNを組み合わせた新しい学習パラダイムだったので．
 
 # どんなもの？
 MOHQAを提案した．
@@ -40,7 +40,7 @@ DQNにとって難しい問題であることが証明されている交絡刺�
 重要な決定点を見つけ，状態-行動-報酬のギャップを埋める能力は3つの重要なメカニズムを用いて達成された．
 - STDPに着想を得た適格性トレースの新規実装
 - Deep RLにおけるmodulated Hebbian Learningの新規使用
-- DQｎにHebbianベースの構造を統合した新しいDeep RLアーキテクチャ
+- DQNにHebbianベースの構造を統合した新しいDeep RLアーキテクチャ
 
 # 技術や手法のキモはどこ？
 ## DQN description
