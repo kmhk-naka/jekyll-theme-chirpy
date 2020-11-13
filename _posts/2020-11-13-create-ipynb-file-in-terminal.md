@@ -34,22 +34,22 @@ Untitled.ipynb
 #!/bin/sh
 
 if [ $# = 0 ]; then
-    if [ -f "Untitled.ipynb" ]; then
-        echo 'file exists: Untitled.ipynb'
-    else
-        echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > Untitled.ipynb
-    fi
+  if [ -f "Untitled.ipynb" ]; then
+    echo 'file exists: Untitled.ipynb'
+  else
+    echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > Untitled.ipynb
+  fi
 else
-    for i in "$@"
-    do
-        if [ "${#i}" -gt 255 ]; then
-            echo 'mkipynb: cannot create' "'$i'" ': File name too long'
-        elif [ ! -f "$i".ipynb ]; then
-            echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > "$i".ipynb
-        else
-            echo 'file exists: ' "$i".ipynb
-        fi
-    done
+  for i in "$@"
+  do
+    if [ "${#i}" -gt 255 ]; then
+      echo 'mkipynb: cannot create' "'$i'" ': File name too long'
+    elif [ ! -f "$i".ipynb ]; then
+      echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > "$i".ipynb
+    else
+      echo 'file exists: ' "$i".ipynb
+    fi
+  done
 fi
 
 exit 0
@@ -119,9 +119,9 @@ PATHの通し方は[こちら](https://qiita.com/Naggi-Goishi/items/2c49ea50602e
 引数の数は`$#`で受け取れます．
 ```shell
 if [ $# = 0 ]; then
-    引数なしの場合の処理
+  引数なしの場合の処理
 else
-    引数がある場合の処理
+  引数がある場合の処理
 fi
 ```
 
@@ -131,16 +131,19 @@ fi
 ```shell
 for i in "$@"
 do
-    処理
+  処理
 done
 ```
 
 処理の部分ですが，ファイル名に文字数制限をかけるために，さらに条件分岐を行っています．
+また，ファイルが既に存在している場合にはメッセージを表示してファイルを作成しないようにしています．
 ```shell
 if [ "${#i}" -gt 255 ]; then
-    文字数制限に引っかかった場合のエラーメッセージを表示
+  文字数制限に引っかかった場合のエラーメッセージを表示
+elif [ ! -f "$i".ipynb ]; then
+  受け取ったファイル名でipynbファイルを作成
 else
-    受け取ったファイル名でipynbファイルを作成する
+  ファイルが存在する場合のメッセージを表示
 fi
 ```
 
@@ -150,22 +153,22 @@ fi
 #!/bin/sh
 
 if [ $# = 0 ]; then
-    if [ -f "Untitled.ipynb" ]; then
-        echo 'file exists: Untitled.ipynb'
-    else
-        echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > Untitled.ipynb
-    fi
+  if [ -f "Untitled.ipynb" ]; then
+    echo 'file exists: Untitled.ipynb'
+  else
+    echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > Untitled.ipynb
+  fi
 else
-    for i in "$@"
-    do
-        if [ "${#i}" -gt 255 ]; then
-            echo 'mkipynb: cannot create' "'$i'" ': File name too long'
-        elif [ ! -f "$i".ipynb ]; then
-            echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > "$i".ipynb
-        else
-            echo 'file exists: ' "$i".ipynb
-        fi
-    done
+  for i in "$@"
+  do
+    if [ "${#i}" -gt 255 ]; then
+      echo 'mkipynb: cannot create' "'$i'" ': File name too long'
+    elif [ ! -f "$i".ipynb ]; then
+      echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > "$i".ipynb
+    else
+      echo 'file exists: ' "$i".ipynb
+    fi
+  done
 fi
 
 exit 0
