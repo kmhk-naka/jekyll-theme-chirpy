@@ -34,14 +34,20 @@ Untitled.ipynb
 #!/bin/sh
 
 if [ $# = 0 ]; then
-    echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > Untitled.ipynb
+    if [ -f "Untitled.ipynb" ]; then
+        echo 'file exists: Untitled.ipynb'
+    else
+        echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > Untitled.ipynb
+    fi
 else
     for i in "$@"
     do
         if [ "${#i}" -gt 255 ]; then
             echo 'mkipynb: cannot create' "'$i'" ': File name too long'
-        else
+        elif [ ! -f "$i".ipynb ]; then
             echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > "$i".ipynb
+        else
+            echo 'file exists: ' "$i".ipynb
         fi
     done
 fi
@@ -144,14 +150,20 @@ fi
 #!/bin/sh
 
 if [ $# = 0 ]; then
-    echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > Untitled.ipynb
+    if [ -f "Untitled.ipynb" ]; then
+        echo 'file exists: Untitled.ipynb'
+    else
+        echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > Untitled.ipynb
+    fi
 else
     for i in "$@"
     do
         if [ "${#i}" -gt 255 ]; then
             echo 'mkipynb: cannot create' "'$i'" ': File name too long'
-        else
+        elif [ ! -f "$i".ipynb ]; then
             echo '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 4\n}' > "$i".ipynb
+        else
+            echo 'file exists: ' "$i".ipynb
         fi
     done
 fi
