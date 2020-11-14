@@ -21,7 +21,7 @@ NeuroEvolution of Augmenting Topologies (NEAT)を提案した．
 
 NEATはニューラルネットワークのトポロジーを重みとともに進化せることで，困難な強化学習ベンチマークテストにおいて，従来のトポロジーを固定した手法を上回る成果をあげた．
 
-TWEANNsにおける以下の3つの疑問に対して解決策を示した．
+[TWEANNs](#topology-and-weight-evolving-artificial-neural-networks-tweanns)における以下の3つの疑問に対して解決策を示した．
 - 異種のトポロジーが意味のある形でクロスオーバーすることを可能にする遺伝的表現はあるのだろうか？
 - 最適化のために数世代を必要とするトポロジカルなイノベーションは，どのようにして集団から早々に消えてしまわないように保護することができるのだろうか？
 - 複雑さを測定するための特別に考案された適合度関数を必要とせずに，進化全体を通してトポロジーを最小化するにはどうすればよいか？
@@ -39,7 +39,7 @@ TWEANNsにおける以下の3つの疑問に対して解決策を示した．
 
 # 技術や手法のキモはどこ？
 ## Genetic Encoding
-NEATの genetic encoding スキームは，交配中に2つのゲノムがクロスオーバーした際に，対応する遺伝子が用意に並ぶように設計されている．
+NEATの genetic encoding スキームは，交配中に2つのゲノムがクロスオーバーした際に，対応する遺伝子が容易に並ぶように設計されている．
 
 NEATにおける突然変異は，接続重みとネットワーク構造の両方を変化させることができる．
 
@@ -129,6 +129,9 @@ Stanley KO, D'Ambrosio DB, Gauci J. A hypercube-based encoding for evolving larg
 | unbounded | 無制限の |
 
 ## メモ
+### Topology and Weight Evolving Artificial Neural Networks (TWEANNs)
+ネットワークのトポロジーとその重みの両方を進化させるアルゴリズムのこと
+
 ### Ablation study
 各構成要素を部分部分で見ていくような実験のこと
 
