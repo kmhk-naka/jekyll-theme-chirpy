@@ -1,9 +1,9 @@
 ---
 title: 【論文読み】Supervised and Evolutionary Learning of Echo State Networks
 categories: [論文, Survey]
-tags: [進化的アルゴリズム，ESN]
+tags: [進化的アルゴリズム, ESN]
 math: true
-date: 2020-12-2 00:58:00 +0900
+date: 2020-12-02 00:58:00 +0900
 ---
 
 # 論文情報
