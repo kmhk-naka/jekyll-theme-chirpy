@@ -177,7 +177,7 @@ Hello World
 ## 引用
 `quote`環境を使用すると，段落の字下げなしで引用を記すことができます．
 ```tex
-
+ソクラテスの名言
 \begin{quote}
   Worthless people live only to eat and drink; people of worth eat and drink only to live.
 
@@ -352,7 +352,7 @@ $$
 \end{table}
 ```
 
-表に縦罫線を引くには，`cols`に`|`(パイプ)を記述し，横罫線を引くには`\hline`コマンドをしようします．
+表に縦罫線を引くには，`cols`に`|`(パイプ)を記述し，横罫線を引くには`\hline`コマンドを使用します．
 
 ```tex
 \begin{table}[h]
