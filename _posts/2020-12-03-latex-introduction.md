@@ -65,6 +65,8 @@ f(x) = ax + b
 ```tex
 \documentclass[11pt]{jsarticle}
 
+% プリアンブル
+
 \begin{document}
 Hello World
 \end{document}
@@ -117,6 +119,60 @@ Hello World
     ．．．
 \end{document}
 ```
+
+## フォントサイズ/カラー
+### フォントサイズ
+フォントサイズを変更するには次のコマンドを使用します．
+`size`にはフォントサイズを，`skip`には行送りを指定します．
+```tex
+\fontsize{size}{skip}\selectfont
+TEXT
+```
+
+この場合，コマンド以降すべてのテキストにフォントサイズの変更が影響します．
+そのため，一部のテキストのみのフォントサイズを変更したい場合は次のようにブロックにします．
+
+```tex
+{\fontsize{size}{skip}\selectfont 
+TEXT
+}
+```
+
+いくつかのフォントサイズはコマンドとして用意されています．
+
+| `\Huge` | 25pt |
+| `\huge` | 20pt |
+| `\LARGE` | 17pt |
+| `\Large` | 14pt |
+| `\large` | 12pt |
+| `\normalsize` (default) | 10pt |
+| `\small` | 9pt |
+| `\footnotesize` | 8pt |
+| `\scriptsize` | 7pt |
+| `\tiny` | 5pt |
+
+### フォントカラー
+文字に色をつけるには`\color{}`コマンドを使用します．
+
+このコマンドを使用するには`color`パッケージを読み込む必要があります．
+プリアンブルに次のように記述します．
+```tex
+\usepackage{color}
+```
+
+そして，`\color{}`コマンド以降の文字が指定された色になります．
+```tex
+\color{red}この文章は赤くなります．
+\color{blue}この文章は青くなります．
+```
+
+特定の文字のみ色を指定した場合は，次のように`{}`で囲んでブロックにします．
+```tex
+{\color{red} これは赤いが}これは黒い．
+```
+
+
+
 
 ## 箇条書き
 ### 記号付き箇条書き
@@ -222,7 +278,17 @@ CISA\footnote{Certified Information Systems Auditor}によれば，．．．．
 ### 番号付き別行立て数式
 `equation`環境を使用すると，1行の別行立て番号付き数式を記述できます．
 ```tex
+\begin{equation}
 f(x) = Ax(1 - x)
+\label{eq:logistic}
+\end{equation}
+```
+
+`\label{}`のようにラベルをつけることで，数式を参照できるようになります．
+参照を行うには`\ref{}`コマンドを使用します．
+
+```tex
+式(\ref{eq:logistic})はロジスティック写像です．
 ```
 
 `equation*`環境を使用すると，数式番号が付かない1行の別行立て数式を記述できます．
@@ -238,11 +304,13 @@ f(x) = Ax(1 - x)
 \begin{document}
 
 \begin{equation}
-f(x) = Ax(1 - x) \label{eq:logistic}
+f(x) = Ax(1 - x)
+\label{eq:logistic}
 \end{equation}
 
 \begin{equation}
-\sqrt{x} + \sqrt{y} = \sqrt{a}  (a > 0) \label{eq:parabola}
+\sqrt{x} + \sqrt{y} = \sqrt{a}  (a > 0)
+\label{eq:parabola}
 \end{equation}
 
 1つ目の数式\eqref{eq:logistic}だけに数式番号がつく．
@@ -259,9 +327,9 @@ f(x) = Ax(1 - x) \label{eq:logistic}
 | 見出し | コマンド | 例 | |
 | --- | --- | --- | --- |
 | 分数 | `\frac{num}{den}` | \\(\frac{1}{x}\\) | `\frac{1}{x}` |
-| 平方根 | `\sqrt[root]{arg}` | \\(\sqrt[2]{10}\\) | `\sqrt[2]{10}` |
-| 上付き文字 | `^` (ハット) | \\(a^2\\) | `a^2` |
-| 下付き文字 | `_` (アンダースコア) | \\(W_i\\) | `W_i` |
+| 平方根 | `\sqrt[root]{arg}` | \\(\sqrt[2]{10}, \sqrt{5}\\) | `\sqrt[2]{10}, \sqrt{5}` |
+| 上付き文字 | `^` (ハット) | \\(a^2, x^{n-1}\\) | `a^2, x^{n-1}` |
+| 下付き文字 | `_` (アンダースコア) | \\(W_i, W_{i,j}\\) | `W_i, W_{i,j}` |
 | 総和 | `\sum` | \\(\sum_{i=1}^{N}\\) | `\sum_{i=1}^{N}` |
 | 総乗 | `\prod` | \\(\prod_{i=1}^{N}\\) | `\prod_{i=1}^{N}` |
 | displaystyle[^displaystyle] | `\displaystyle` | \\(\displaystyle\sum_{i=1}^{N}\\) | `\displaystyle\sum_{i=1}^{N}` |
@@ -287,20 +355,29 @@ f(x) = Ax(1 - x) \label{eq:logistic}
 
 ```tex
 \begin{equation}
-  W = \left(\begin{array}{ccc}
-    w_{11} & w_{12} & w_{13}\\
-    w_{21} & w_{22} & w_{23}\\
-    w_{31} & w_{32} & w_{33}
-  \end{array}\right)
+  W = \left[\begin{array}{cccc}
+    W_{1,1} & W_{1,2} & \ldots & W_{1,m}\\
+    W_{2,1} & W_{2,2} & \ldots & W_{2,m}\\
+    \vdots & \vdots & \ddots & \vdots\\
+    W_{n,1} & W_{n,2} & \ldots & W_{n,m}
+  \end{array}\right]
 \end{equation}
 ```
 $$
-  W = \left(\begin{array}{ccc}
-    w_{11} & w_{12} & w_{13}\\
-    w_{21} & w_{22} & w_{23}\\
-    w_{31} & w_{32} & w_{33}\\
-  \end{array}\right)
+W = \left[\begin{array}{cccc}
+  W_{1,1} & W_{1,2} & \ldots & W_{1,m}\\
+  W_{2,1} & W_{2,2} & \ldots & W_{2,m}\\
+  \vdots & \vdots & \ddots & \vdots\\
+  W_{n,1} & W_{n,2} & \ldots & W_{n,m}
+\end{array}\right]
 $$
+
+##### 3点ドット
+
+| 中央3点ドット | `\cdots` | \\(\cdots\\) |
+| 下3点ドット | `\ldots` | \\(\ldots\\) |
+| 縦方向3点ドット | `\vdots` | \\(\vdots\\) |
+| 対角3点ドット | `\ddots` | \\(\ddots\\) |
 
 #### 場合分け
 場合分けも表現方法はいろいろありますが，`array`環境を使用したものが汎用性が高いでしょう．
