@@ -123,7 +123,7 @@ def manual_capture():
             ret, frame = cap.read()
             cv2.imshow('frame', frame)
 
-            k = cv2.waitKey(1) & 0xFF
+            k = cv2.waitKey(1)
             if k == 32:  # Space key
                 image_num += 1
                 image_name = IMAGE_PATH / label / f'{label}.{uuid.uuid1()}.jpg'
@@ -236,7 +236,7 @@ def manual_capture():
             ret, frame = cap.read()
             cv2.imshow('frame', frame)
 
-            k = cv2.waitKey(1) & 0xFF
+            k = cv2.waitKey(1)
             if k == 32:  # Space key
                 image_num += 1
                 image_name = IMAGE_PATH / label / f'{label}.{uuid.uuid1()}.jpg'
