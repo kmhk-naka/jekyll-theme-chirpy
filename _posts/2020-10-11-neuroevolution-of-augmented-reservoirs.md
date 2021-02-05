@@ -1,7 +1,7 @@
 ---
 title: 【論文読み】Adaptive reservoir computing through evolution and learning
 categories: [論文, Survey]
-tags: [リザバー計算, Neuroevolution, 進化計算, 強化学習]
+tags: [NEAR, NEAT, リザバー計算, Neuroevolution, 進化計算, 強化学習]
 math: true
 ---
 
