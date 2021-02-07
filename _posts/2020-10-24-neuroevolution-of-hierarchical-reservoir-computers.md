@@ -1,7 +1,7 @@
 ---
 title: 【論文読み】Neuroevolution of Hierarchical Reservoir Computers
 categories: [論文, Survey]
-tags: [リザバー計算, Neuroevolution]
+tags: [Reservoir Computing, Neuroevolution]
 math: true
 ---
 
