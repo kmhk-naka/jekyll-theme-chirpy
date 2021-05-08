@@ -98,6 +98,11 @@ Table of contentsの自動生成や箇条書きのサポート，表のフォー
 
 自動スクロール同期や[math typesetting](https://shd101wyy.github.io/markdown-preview-enhanced/#/math)のほかに，[mermaid](https://shd101wyy.github.io/markdown-preview-enhanced/#/diagrams?id=mermaid)や[PlantUML](https://shd101wyy.github.io/markdown-preview-enhanced/#/diagrams?id=plantuml)などのプレビュー機能も備えています．
 
+Front Matterの表示もできて，表示させるには設定を変更する必要があります． (初期設定は `none` )
+```json
+"markdown-preview-enhanced.frontMatterRenderingOption": "table",
+```
+
 ![Markdown Preview Enhanced](/assets/img/posts/2021-05-08-VSCode-extensions/Markdown-Preview-Enhanced.png){: width="700"}
 
 # 同期／設定／その他
