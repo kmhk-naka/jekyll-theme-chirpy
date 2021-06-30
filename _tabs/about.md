@@ -2,12 +2,6 @@
 title: About
 icon: fas fa-info
 order: 4
-
-# The About page
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
-# MIT License
 ---
 福岡在住の大学院2年生の中原公彦です．
 高1の頃にJavaに入門し，大学入学後に本格的にプログラミングの勉強を開始しました．
