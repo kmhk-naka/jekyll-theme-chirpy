@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en-US" ><head> <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-181625905-1"></script> <script> document.addEventListener("DOMContentLoaded", function(event) { window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-181625905-1'); }); </script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="【LaTeX】基本文法のまとめ" /><meta name="author" content="Kimihiko Nakahara" /><meta property="og:locale" content="en_US" /><meta name="description" content="LaTeXとは \(\mathrm{\TeX}\)の上で構築されたフリーの文書処理システムです．" /><meta property="og:description" content="LaTeXとは \(\mathrm{\TeX}\)の上で構築されたフリーの文書処理システムです．" /><link rel="canonical" href="https://kmhk-naka.github.io/posts/latex-introduction/" /><meta property="og:url" content="https://kmhk-naka.github.io/posts/latex-introduction/" /><meta property="og:site_name" content="Kmhk.N" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2020-12-03T13:15:00+09:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="【LaTeX】基本文法のまとめ" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"author":{"@type":"Person","name":"Kimihiko Nakahara"},"description":"LaTeXとは \\(\\mathrm{\\TeX}\\)の上で構築されたフリーの文書処理システムです．","url":"https://kmhk-naka.github.io/posts/latex-introduction/","@type":"BlogPosting","headline":"【LaTeX】基本文法のまとめ","dateModified":"2020-12-06T18:39:00+09:00","datePublished":"2020-12-03T13:15:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://kmhk-naka.github.io/posts/latex-introduction/"},"@context":"https://schema.org"}</script><title>【LaTeX】基本文法のまとめ | Kmhk.N</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="Kmhk.N"><meta name="application-name" content="Kmhk.N"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4/dist/js/bootstrap.min.js"></script> <script async src="https://cdn.jsdelivr.net/combine/npm/lozad/dist/lozad.min.js,npm/magnific-popup@1/dist/jquery.magnific-popup.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script> /* see: <https://docs.mathjax.org/en/latest/options/input/tex.html#tex-options> */ MathJax = { tex: { inlineMath: [ /* start/end delimiter pairs for in-line math */ ['$','$'], ['\\(','\\)'] ], displayMath: [ /* start/end delimiter pairs for display math */ ['$$', '$$'], ['\\[', '\\]'] ] } }; </script> <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script> <script defer src="/app.js"></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" alt="avatar" class="mx-auto"> <img src="/assets/img/avatar.jpg" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title mt-3"> <a href="/">Kmhk.N</a></div><div class="site-subtitle font-italic">Python / Rust / Reservoir Computing</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center"> <a href="https://github.com/kmhk-naka" aria-label="github" class="order-3" target="_blank" rel="noopener"> <i class="fab fa-github-alt"></i> </a> <a href="/feed.xml" aria-label="rss" class="order-4" > <i class="fas fa-rss"></i> </a> <a href="https://www.linkedin.com/in/kmhk-naka" aria-label="linkedin" class="order-5" target="_blank" rel="noopener"> <i class="fab fa-linkedin"></i> </a> <span class="icon-border order-2"></span> <span id="mode-toggle-wrapper" class="order-1"> <i class="mode-toggle fas fa-adjust"></i> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } constructor() { if (this.hasMode) { if (this.isDarkMode) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } var self = this; /* always follow the system prefers */ this.sysDarkPrefers.addListener(function() { if (self.hasMode) { if (self.isDarkMode) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } self.updateMermaid(); }); } /* constructor() */ setDark() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_KEY); sessionStorage.removeItem(ModeToggle.MODE_KEY); } get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; } get isLightMode() { return this.mode == ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } /* get the current mode on screen */ get modeStatus() { if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer) ) { return ModeToggle.DARK_MODE; } else { return ModeToggle.LIGHT_MODE; } } updateMermaid() { if (typeof mermaid !== "undefined") { let expectedTheme = (this.modeStatus === ModeToggle.DARK_MODE? "dark" : "default"); let config = { theme: expectedTheme }; /* re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */ $(".mermaid").each(function() { let svgCode = $(this).prev().children().html(); $(this).removeAttr("data-processed"); $(this).html(svgCode); }); mermaid.initialize(config); mermaid.init(undefined, ".mermaid"); } } flipMode() { if (this.hasMode) { if (this.isSysDarkPrefer) { if (this.isLightMode) { this.clearMode(); } else { this.setLight(); } } else { if (this.isDarkMode) { this.clearMode(); } else { this.setDark(); } } } else { if (this.isSysDarkPrefer) { this.setLight(); } else { this.setDark(); } } this.updateMermaid(); } /* flipMode() */ } /* ModeToggle */ let toggle = new ModeToggle(); $(".mode-toggle").click(function() { toggle.flipMode(); }); </script> </span></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>【LaTeX】基本文法のまとめ</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>【LaTeX】基本文法のまとめ</h1><div class="post-meta text-muted d-flex flex-column"><div> <span class="semi-bold"> Kimihiko Nakahara </span> <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Thu, Dec 3, 2020, 1:15 PM +0900" prep="on" > Dec 3, 2020 <i class="unloaded">2020-12-03T13:15:00+09:00</i> </span></div><div> <span> <span class="timeago lastmod" data-toggle="tooltip" data-placement="bottom" title="Sun, Dec 6, 2020, 6:39 PM +0900" prefix="Updated " > Dec 6, 2020 <i class="unloaded">2020-12-06T18:39:00+09:00</i> </span> </span> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="3512 words">19 min</span></div></div><div class="post-content"><h1 id="latexとは">LaTeXとは</h1><p>\(\mathrm{\TeX}\)の上で構築されたフリーの文書処理システムです．</p><p>数式をよく書くようであれば，WordなどのWYSIWYGソフトよりもかなり楽になります．</p><p>また，実体はテキストファイルであるため，Gitでバージョン管理することが可能です．</p><p>LaTeXについて詳しくは<a href="https://texwiki.texjp.org/?LaTeX%E5%85%A5%E9%96%80">LaTeX入門 - TeX Wiki</a>を参照してください．</p><h1 id="この記事を読む上での注意事項">この記事を読む上での注意事項</h1><p>この記事では以下のことを前提として説明しています．</p><ul><li>TeX Liveをインストールしています．<li>pLaTeX + dvipdfmxでビルドします．</ul><p>インストールについては<a href="https://texwiki.texjp.org/?TeX%E5%85%A5%E6%89%8B%E6%B3%95">TeX入手法 - TeX Wiki</a>を参照してください．</p><p>本記事では，ページの読み込みが重くなることを避けるためにビルド結果のPDF内容を記載していません．</p><p>本記事は必要に応じて随時更新していきます．</p><h1 id="基本知識">基本知識</h1><p>LaTeXでは，<code class="language-plaintext highlighter-rouge">コマンド</code>と<code class="language-plaintext highlighter-rouge">環境</code>によって構成されています．</p><p>コマンドは<code class="language-plaintext highlighter-rouge">\title{Hello World}</code>のように<code class="language-plaintext highlighter-rouge">\</code>から始まります．</p><p>そして，次のように<code class="language-plaintext highlighter-rouge">\begin{}</code>と<code class="language-plaintext highlighter-rouge">\end{}</code>で囲まれた部分を環境と呼びます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="nt">\begin{equation}</span>
+f(x) = ax + b
+<span class="nt">\end{equation}</span>
+</pre></table></code></div></div><p><code class="language-plaintext highlighter-rouge">%</code>を使用すると，それ以降はコメントアウトされます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="c">%%% これは一次関数です．</span>
+<span class="nt">\begin{equation}</span>
+f(x) = ax + b
+<span class="nt">\end{equation}</span>
+</pre></table></code></div></div><h1 id="基本文法">基本文法</h1><h2 id="最低限のテンプレート">最低限のテンプレート</h2><p><code class="language-plaintext highlighter-rouge">\documentclass[options]{class}</code>で文書の種類を指定します．</p><p>主要なクラスとしては次のようなものがあります．</p><div class="table-wrapper"><table><thead><tr><th>class<th>概要<tbody><tr><td>article<td>ドキュメントや記事を書くためのもです．<tr><td>report<td>articleに<code class="language-plaintext highlighter-rouge">\chapter{}</code>が追加され，報告書の作成に利用されます．<tr><td>book<td>書籍を書くためのものです．製本用に奇数ページと偶数ページでレイアウトが異なります．<tr><td>beamer<td>スライド資料の作成に利用されます．</table></div><p>そして，<code class="language-plaintext highlighter-rouge">document</code>環境内に本文を記述します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre><span class="k">\documentclass</span><span class="na">[11pt]</span><span class="p">{</span>jsarticle<span class="p">}</span>
+
+<span class="c">% プリアンブル</span>
+
+<span class="nt">\begin{document}</span>
+Hello World
+<span class="nt">\end{document}</span>
+</pre></table></code></div></div><p>環境構築が完了している場合，これをビルドすると「Hello World」と書かれたPDFが生成されます．</p><p><code class="language-plaintext highlighter-rouge">\documentclass{...}</code>と<code class="language-plaintext highlighter-rouge">\begin{document}</code>の間の部分を<em>プリアンブル</em>と呼び，ここにはパッケージの読み込みやコマンドの定義などを記述します．</p><h2 id="タイトル">タイトル</h2><p><code class="language-plaintext highlighter-rouge">\title{}</code>コマンドでタイトルを指定します．</p><p><code class="language-plaintext highlighter-rouge">\author{}</code>で著者名を指定し<code class="language-plaintext highlighter-rouge">\date{}</code>で日付を指定します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre><td class="rouge-code"><pre><span class="k">\documentclass</span><span class="na">[11pt]</span><span class="p">{</span>jsarticle<span class="p">}</span>
+
+<span class="k">\title</span><span class="p">{</span>タイトル<span class="p">}</span>
+<span class="k">\author</span><span class="p">{</span>著者名<span class="p">}</span>
+<span class="k">\date</span><span class="p">{</span>2020/12/02<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+<span class="k">\maketitle</span>
+<span class="nt">\end{document}</span>
+</pre></table></code></div></div><h2 id="見出しと目次">見出しと目次</h2><p>文書の論理構造は以下のようになります．</p><div class="table-wrapper"><table><thead><tr><th>コマンド<th>概要<tbody><tr><td><code class="language-plaintext highlighter-rouge">\part{}</code><td>部<tr><td><code class="language-plaintext highlighter-rouge">\chapter{}</code><td>章<tr><td><code class="language-plaintext highlighter-rouge">\section{}</code><td>節<tr><td><code class="language-plaintext highlighter-rouge">\subsection{}</code><td>小節<tr><td><code class="language-plaintext highlighter-rouge">\subsubsection{}</code><td>小々節<tr><td><code class="language-plaintext highlighter-rouge">\paragraph{}</code><td>段落</table></div><p>そして，これらの目次を作るには<code class="language-plaintext highlighter-rouge">\tableofcontents</code>コマンドを使用します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre><span class="k">\documentclass</span><span class="na">[11pt]</span><span class="p">{</span>jsarticle<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+<span class="k">\tableofcontents</span>
+
+<span class="k">\section</span><span class="p">{</span>セクション<span class="p">}</span>
+    ．．．
+<span class="k">\subsection</span><span class="p">{</span>サブセクション<span class="p">}</span>
+    ．．．
+<span class="nt">\end{document}</span>
+</pre></table></code></div></div><h2 id="フォントサイズカラー">フォントサイズ/カラー</h2><h3 id="フォントサイズ">フォントサイズ</h3><p>フォントサイズを変更するには次のコマンドを使用します． <code class="language-plaintext highlighter-rouge">size</code>にはフォントサイズを，<code class="language-plaintext highlighter-rouge">skip</code>には行送りを指定します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">\fontsize</span><span class="p">{</span>size<span class="p">}{</span>skip<span class="p">}</span><span class="k">\selectfont</span>
+TEXT
+</pre></table></code></div></div><p>この場合，コマンド以降すべてのテキストにフォントサイズの変更が影響します． そのため，一部のテキストのみのフォントサイズを変更したい場合は次のようにブロックにします．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="p">{</span><span class="k">\fontsize</span><span class="p">{</span>size<span class="p">}{</span>skip<span class="p">}</span><span class="k">\selectfont</span> 
+TEXT
+<span class="p">}</span>
+</pre></table></code></div></div><p>いくつかのフォントサイズはコマンドとして用意されています．</p><div class="table-wrapper"><table><tbody><tr><td><code class="language-plaintext highlighter-rouge">\Huge</code><td>25pt<tr><td><code class="language-plaintext highlighter-rouge">\huge</code><td>20pt<tr><td><code class="language-plaintext highlighter-rouge">\LARGE</code><td>17pt<tr><td><code class="language-plaintext highlighter-rouge">\Large</code><td>14pt<tr><td><code class="language-plaintext highlighter-rouge">\large</code><td>12pt<tr><td><code class="language-plaintext highlighter-rouge">\normalsize</code> (default)<td>10pt<tr><td><code class="language-plaintext highlighter-rouge">\small</code><td>9pt<tr><td><code class="language-plaintext highlighter-rouge">\footnotesize</code><td>8pt<tr><td><code class="language-plaintext highlighter-rouge">\scriptsize</code><td>7pt<tr><td><code class="language-plaintext highlighter-rouge">\tiny</code><td>5pt</table></div><h3 id="フォントカラー">フォントカラー</h3><p>文字に色をつけるには<code class="language-plaintext highlighter-rouge">\color{}</code>コマンドを使用します．</p><p>このコマンドを使用するには<code class="language-plaintext highlighter-rouge">color</code>パッケージを読み込む必要があります． プリアンブルに次のように記述します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="k">\usepackage</span><span class="p">{</span>color<span class="p">}</span>
+</pre></table></code></div></div><p>そして，<code class="language-plaintext highlighter-rouge">\color{}</code>コマンド以降の文字が指定された色になります．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="k">\color</span><span class="p">{</span>red<span class="p">}</span>この文章は赤くなります．
+<span class="k">\color</span><span class="p">{</span>blue<span class="p">}</span>この文章は青くなります．
+</pre></table></code></div></div><p>特定の文字のみ色を指定した場合は，次のように<code class="language-plaintext highlighter-rouge">{}</code>で囲んでブロックにします．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="p">{</span><span class="k">\color</span><span class="p">{</span>red<span class="p">}</span> これは赤いが<span class="p">}</span>これは黒い．
+</pre></table></code></div></div><h2 id="箇条書き">箇条書き</h2><h3 id="記号付き箇条書き">記号付き箇条書き</h3><p><code class="language-plaintext highlighter-rouge">itemize</code>環境を使用すると，先頭に記号をつけた箇条書きを記せます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="nt">\begin{itemize}</span>
+  <span class="k">\item</span> DCGAN
+  <span class="k">\item</span> CycleGAN
+  <span class="k">\item</span> WaveGAN
+<span class="nt">\end{itemize}</span>
+</pre></table></code></div></div><h3 id="番号付き箇条書き">番号付き箇条書き</h3><p><code class="language-plaintext highlighter-rouge">enumerate</code>環境を使用すると，先頭に番号をつけた箇条書きを記せます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="nt">\begin{enumerate}</span>
+  <span class="k">\item</span> データの収集
+  <span class="k">\item</span> モデルの作成
+  <span class="k">\item</span> 学習と予測
+<span class="nt">\end{enumerate}</span>
+</pre></table></code></div></div><h3 id="定義型箇条書き">定義型箇条書き</h3><p><code class="language-plaintext highlighter-rouge">description</code>環境を使用すると，先頭に指定したラベルをつけた箇条書きを記せます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="nt">\begin{description}</span>
+  <span class="k">\item</span><span class="na">[日時]</span> 2020年 12月
+  <span class="k">\item</span><span class="na">[場所]</span> BBQ場
+  <span class="k">\item</span><span class="na">[参加費]</span> 3,000円
+<span class="nt">\end{description}</span>
+</pre></table></code></div></div><h2 id="左揃え中央揃え右揃え">左揃え/中央揃え/右揃え</h2><h3 id="左揃え">左揃え</h3><p><code class="language-plaintext highlighter-rouge">flushleft</code>環境を使用すると，環境内に記述された文章は左揃えになります．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="nt">\begin{flushleft}</span>
+  左揃えになります．
+<span class="nt">\end{flushleft}</span>
+</pre></table></code></div></div><h3 id="中央揃え">中央揃え</h3><p><code class="language-plaintext highlighter-rouge">center</code>環境を使用すると，環境内に記述された文章は中央揃えになります．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="nt">\begin{center}</span>
+  中央揃えになります．
+<span class="nt">\end{center}</span>
+</pre></table></code></div></div><h3 id="右揃え">右揃え</h3><p><code class="language-plaintext highlighter-rouge">flushright</code>環境を使用すると，環境内に記述された文章は右揃えになります．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="nt">\begin{flushright}</span>
+  右揃えになります．
+<span class="nt">\end{flushright}</span>
+</pre></table></code></div></div><h2 id="引用">引用</h2><p><code class="language-plaintext highlighter-rouge">quote</code>環境を使用すると，段落の字下げなしで引用を記すことができます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>ソクラテスの名言
+<span class="nt">\begin{quote}</span>
+  Worthless people live only to eat and drink; people of worth eat and drink only to live.
+
+  価値のない人々は飲食のためだけに生き，価値のある人々は生きるために飲食する．
+<span class="nt">\end{quote}</span>
+</pre></table></code></div></div><p><code class="language-plaintext highlighter-rouge">quotation</code>環境を使用すると，段落の字下げありで引用を記すことができます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>ソクラテスの名言
+<span class="nt">\begin{quotation}</span>
+  To know, is to know that you know nothing. That is the meaning of true knowledge.
+
+  知るということは，あなたが何も知らないということを知ることである．それが本当の知識だ．
+<span class="nt">\end{quotation}</span>
+</pre></table></code></div></div><h2 id="脚注">脚注</h2><p><code class="language-plaintext highlighter-rouge">\footnote[number]{text}</code>コマンドを使用すると使用すると，ページ下部に脚注を挿入できます．</p><p>オプションの<code class="language-plaintext highlighter-rouge">number</code>は省略可能です．その場合は自動的に番号が振られます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>CISA<span class="k">\footnote</span><span class="p">{</span>Certified Information Systems Auditor<span class="p">}</span>によれば，．．．．
+</pre></table></code></div></div><p>また，<code class="language-plaintext highlighter-rouge">\footnotemark[number]</code>と<code class="language-plaintext highlighter-rouge">\footnotetext[number]{text}</code>を使用して，脚注のテキストを書く場所を分離できます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>サイドチャネル攻撃<span class="k">\footnotemark</span><span class="na">[1]</span>を許す脆弱性「PLATYPUS」が判明した．
+
+<span class="k">\footnotetext</span><span class="na">[1]</span><span class="p">{</span>暗号装置の動作状況を様々な物理的手段で暗号解読を行う手法の総称<span class="p">}</span>
+</pre></table></code></div></div><h2 id="数式">数式</h2><h3 id="インライン数式">インライン数式</h3><p>文章中に数式を記述する方法はいくつかありますが，ここでは最もシンプルな<code class="language-plaintext highlighter-rouge">$ $</code>で囲む方法を紹介します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>関数<span class="p">$</span><span class="nb">f</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> Ax</span><span class="o">(</span><span class="m">1</span><span class="nb"> </span><span class="o">-</span><span class="nb"> x</span><span class="o">)</span><span class="p">$</span>をロジスティック写像といいます．
+</pre></table></code></div></div><h3 id="番号付き別行立て数式">番号付き別行立て数式</h3><p><code class="language-plaintext highlighter-rouge">equation</code>環境を使用すると，1行の別行立て番号付き数式を記述できます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre><td class="rouge-code"><pre><span class="nt">\begin{equation}</span>
+f(x) = Ax(1 - x)
+<span class="k">\label</span><span class="p">{</span>eq:logistic<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+</pre></table></code></div></div><p><code class="language-plaintext highlighter-rouge">\label{}</code>のようにラベルをつけることで，数式を参照できるようになります． 参照を行うには<code class="language-plaintext highlighter-rouge">\ref{}</code>コマンドを使用します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre>式(<span class="k">\ref</span><span class="p">{</span>eq:logistic<span class="p">}</span>)はロジスティック写像です．
+</pre></table></code></div></div><p><code class="language-plaintext highlighter-rouge">equation*</code>環境を使用すると，数式番号が付かない1行の別行立て数式を記述できます．</p><p>しかし，数式番号をつけるかどうかを手動で区別するのは面倒なので，<code class="language-plaintext highlighter-rouge">mathtools</code>パッケージに任せましょう． <code class="language-plaintext highlighter-rouge">\eqref{label}</code>コマンドを使用して参照した数式にのみ数式番号がつきます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre><td class="rouge-code"><pre><span class="c">% プリアンブル</span>
+<span class="k">\usepackage</span><span class="p">{</span>mathtools<span class="p">}</span>
+<span class="k">\mathtoolsset</span><span class="p">{</span>showonlyrefs=true<span class="p">}</span>
+
+<span class="nt">\begin{document}</span>
+
+<span class="nt">\begin{equation}</span>
+f(x) = Ax(1 - x)
+<span class="k">\label</span><span class="p">{</span>eq:logistic<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+
+<span class="nt">\begin{equation}</span>
+<span class="k">\sqrt</span><span class="p">{</span>x<span class="p">}</span> + <span class="k">\sqrt</span><span class="p">{</span>y<span class="p">}</span> = <span class="k">\sqrt</span><span class="p">{</span>a<span class="p">}</span>  (a &gt; 0)
+<span class="k">\label</span><span class="p">{</span>eq:parabola<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+
+1つ目の数式<span class="k">\eqref</span><span class="p">{</span>eq:logistic<span class="p">}</span>だけに数式番号がつく．
+
+<span class="nt">\end{document}</span>
+</pre></table></code></div></div><h3 id="表記法やシンボル">表記法やシンボル</h3><p>数式を記述する際によく使用する表記法やシンボルについて記します． すべてを紹介することができないため，ここに記載のないものは適宜調べてください．</p><p>シンボルについては，<a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">List of LaTeX mathematical symbols - OeisWiki</a>が参考になると思います．</p><div class="table-wrapper"><table><thead><tr><th>見出し<th>コマンド<th>例<th> <tbody><tr><td>分数<td><code class="language-plaintext highlighter-rouge">\frac{num}{den}</code><td>\(\frac{1}{x}\)<td><code class="language-plaintext highlighter-rouge">\frac{1}{x}</code><tr><td>平方根<td><code class="language-plaintext highlighter-rouge">\sqrt[root]{arg}</code><td>\(\sqrt[2]{10}, \sqrt{5}\)<td><code class="language-plaintext highlighter-rouge">\sqrt[2]{10}, \sqrt{5}</code><tr><td>上付き文字<td><code class="language-plaintext highlighter-rouge">^</code> (ハット)<td>\(a^2, x^{n-1}\)<td><code class="language-plaintext highlighter-rouge">a^2, x^{n-1}</code><tr><td>下付き文字<td><code class="language-plaintext highlighter-rouge">_</code> (アンダースコア)<td>\(W_i, W_{i,j}\)<td><code class="language-plaintext highlighter-rouge">W_i, W_{i,j}</code><tr><td>総和<td><code class="language-plaintext highlighter-rouge">\sum</code><td>\(\sum_{i=1}^{N}\)<td><code class="language-plaintext highlighter-rouge">\sum_{i=1}^{N}</code><tr><td>総乗<td><code class="language-plaintext highlighter-rouge">\prod</code><td>\(\prod_{i=1}^{N}\)<td><code class="language-plaintext highlighter-rouge">\prod_{i=1}^{N}</code><tr><td>displaystyle<sup id="fnref:displaystyle" role="doc-noteref"><a href="#fn:displaystyle" class="footnote" rel="footnote">1</a></sup><td><code class="language-plaintext highlighter-rouge">\displaystyle</code><td>\(\displaystyle\sum_{i=1}^{N}\)<td><code class="language-plaintext highlighter-rouge">\displaystyle\sum_{i=1}^{N}</code><tr><td>ローマン体表記<td><code class="language-plaintext highlighter-rouge">\mathrm{text}</code><td>\(W_\mathrm{out}\)<td><code class="language-plaintext highlighter-rouge">W_\mathrm{out}</code><tr><td>ギリシャ文字<td><code class="language-plaintext highlighter-rouge">\alpha</code>など<td>\(\delta, \Delta\)<td><code class="language-plaintext highlighter-rouge">\delta, \Delta</code><tr><td>微分<td><code class="language-plaintext highlighter-rouge">\prime</code><td>\(f^\prime, f^{\prime\prime}\)<td><code class="language-plaintext highlighter-rouge">f^\prime, f^{\prime\prime}</code><tr><td>偏微分<td><code class="language-plaintext highlighter-rouge">\partial</code><td>\(\frac{\partial}{\partial x} f\)<td><code class="language-plaintext highlighter-rouge">\frac{\partial}{\partial x} f</code><tr><td>積分<td><code class="language-plaintext highlighter-rouge">\int</code><td>\(\int_0^\infty f(x)\,dx\)<td><code class="language-plaintext highlighter-rouge">\int_0^\infty f(x)\,dx</code><tr><td>上線<td><code class="language-plaintext highlighter-rouge">\overline</code><td>\(\overline{A + B}\)<td><code class="language-plaintext highlighter-rouge">\overline{A + B}</code><tr><td>下線<td><code class="language-plaintext highlighter-rouge">\underline</code><td>\(\underline{A + B}\)<td><code class="language-plaintext highlighter-rouge">\underline{A + B}</code><tr><td>不等号<td><code class="language-plaintext highlighter-rouge">\geq</code>, <code class="language-plaintext highlighter-rouge">\leq</code><td>\(\geq, \leq\)<td><code class="language-plaintext highlighter-rouge">\geq, \leq</code><tr><td>ドット<td><code class="language-plaintext highlighter-rouge">\dot{}</code><td>\(\dot{x}\)<td><code class="language-plaintext highlighter-rouge">\dot{x}</code><tr><td>ベクトル<td><code class="language-plaintext highlighter-rouge">\vec{}</code><td>\(\vec{x}\)<td><code class="language-plaintext highlighter-rouge">\vec{x}</code></table></div><h4 id="行列">行列</h4><p>行列を表現する方法はいろいろありますが，<code class="language-plaintext highlighter-rouge">array</code>環境を使用したものが一番汎用性が高いので紹介します．</p><p><code class="language-plaintext highlighter-rouge">\left( \right)</code>は，囲まれた中身の幅に合わせて伸長します．</p><p><code class="language-plaintext highlighter-rouge">\begin{array}{cols}</code>の<code class="language-plaintext highlighter-rouge">cols</code>は，左揃えの<code class="language-plaintext highlighter-rouge">l</code>と中央揃えの<code class="language-plaintext highlighter-rouge">c</code>，右揃えの<code class="language-plaintext highlighter-rouge">r</code>を指定します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre><td class="rouge-code"><pre><span class="nt">\begin{equation}</span>
+  W = <span class="k">\left</span>[<span class="nt">\begin{array}</span><span class="p">{</span>cccc<span class="p">}</span>
+    W<span class="p">_{</span>1,1<span class="p">}</span> <span class="p">&amp;</span> W<span class="p">_{</span>1,2<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\ldots</span> <span class="p">&amp;</span> W<span class="p">_{</span>1,m<span class="p">}</span><span class="k">\\</span>
+    W<span class="p">_{</span>2,1<span class="p">}</span> <span class="p">&amp;</span> W<span class="p">_{</span>2,2<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\ldots</span> <span class="p">&amp;</span> W<span class="p">_{</span>2,m<span class="p">}</span><span class="k">\\</span>
+    <span class="k">\vdots</span> <span class="p">&amp;</span> <span class="k">\vdots</span> <span class="p">&amp;</span> <span class="k">\ddots</span> <span class="p">&amp;</span> <span class="k">\vdots\\</span>
+    W<span class="p">_{</span>n,1<span class="p">}</span> <span class="p">&amp;</span> W<span class="p">_{</span>n,2<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\ldots</span> <span class="p">&amp;</span> W<span class="p">_{</span>n,m<span class="p">}</span>
+  <span class="nt">\end{array}</span><span class="k">\right</span>]
+<span class="nt">\end{equation}</span>
+</pre></table></code></div></div><p>\(W = \left[\begin{array}{cccc} W_{1,1} &amp; W_{1,2} &amp; \ldots &amp; W_{1,m}\\ W_{2,1} &amp; W_{2,2} &amp; \ldots &amp; W_{2,m}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\ W_{n,1} &amp; W_{n,2} &amp; \ldots &amp; W_{n,m} \end{array}\right]\)</p><h5 id="3点ドット">3点ドット</h5><div class="table-wrapper"><table><tbody><tr><td>中央3点ドット<td><code class="language-plaintext highlighter-rouge">\cdots</code><td>\(\cdots\)<tr><td>下3点ドット<td><code class="language-plaintext highlighter-rouge">\ldots</code><td>\(\ldots\)<tr><td>縦方向3点ドット<td><code class="language-plaintext highlighter-rouge">\vdots</code><td>\(\vdots\)<tr><td>対角3点ドット<td><code class="language-plaintext highlighter-rouge">\ddots</code><td>\(\ddots\)</table></div><h4 id="場合分け">場合分け</h4><p>場合分けも表現方法はいろいろありますが，<code class="language-plaintext highlighter-rouge">array</code>環境を使用したものが汎用性が高いでしょう．</p><p><code class="language-plaintext highlighter-rouge">\left\{</code>について，<code class="language-plaintext highlighter-rouge">{</code>はエスケープする必要がある点に注意してください．</p><p><code class="language-plaintext highlighter-rouge">\right.</code>について，場合分けの場合は括弧を閉じる必要はありませんが，<code class="language-plaintext highlighter-rouge">\left</code>に対して必ず<code class="language-plaintext highlighter-rouge">\right</code>が必要になります．そのため，<code class="language-plaintext highlighter-rouge">.</code>を用いて省略しています．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre><span class="nt">\begin{equation}</span>
+  z = <span class="k">\left\{</span><span class="nt">\begin{array}</span><span class="p">{</span>ll<span class="p">}</span>
+    x <span class="p">&amp;</span> x &gt; 0<span class="k">\\</span>
+    0 <span class="p">&amp;</span> x <span class="k">\leq</span> 0
+  <span class="nt">\end{array}</span><span class="k">\right</span>.
+<span class="nt">\end{equation}</span>
+</pre></table></code></div></div><p>\(z = \left\{\begin{array}{ll} x &amp; x &gt; 0\\ 0 &amp; x \leq 0 \end{array}\right.\)</p><h2 id="図表">図・表</h2><h3 id="図">図</h3><p>図を挿入するために，<code class="language-plaintext highlighter-rouge">figure</code>環境と<code class="language-plaintext highlighter-rouge">\includegraphics[options]{name}</code>コマンドを使用します．</p><p>図には<code class="language-plaintext highlighter-rouge">\caption</code>を用いてキャプションを設定したり，<code class="language-plaintext highlighter-rouge">\label</code>を用いてラベルをつけたりできます．</p><p>一般的な<code class="language-plaintext highlighter-rouge">figure</code>環境の例を示します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre><span class="nt">\begin{figure}</span>[h]
+  <span class="k">\centering</span>
+  <span class="k">\includegraphics</span><span class="na">[width=0.7\textwidth]</span><span class="p">{</span>logistic.jpg<span class="p">}</span>
+  <span class="k">\caption</span><span class="p">{</span>ロジスティック写像<span class="p">}</span>
+  <span class="k">\label</span><span class="p">{</span>fig:logistic<span class="p">}</span>
+<span class="nt">\end{figure}</span>
+</pre></table></code></div></div><h3 id="表">表</h3><p>表を挿入するために，<code class="language-plaintext highlighter-rouge">table</code>環境と<code class="language-plaintext highlighter-rouge">tabular</code>環境を使用します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="nt">\begin{table}</span>[pos]
+  <span class="nt">\begin{tabular}</span><span class="p">{</span>cols<span class="p">}</span>
+
+  <span class="nt">\end{tabular}</span>
+<span class="nt">\end{table}</span>
+</pre></table></code></div></div><p>表に縦罫線を引くには，<code class="language-plaintext highlighter-rouge">cols</code>に<code class="language-plaintext highlighter-rouge">|</code>(パイプ)を記述し，横罫線を引くには<code class="language-plaintext highlighter-rouge">\hline</code>コマンドを使用します．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre><span class="nt">\begin{table}</span>[h]
+  <span class="nt">\begin{tabular}</span><span class="p">{</span>|c|l|r|<span class="p">}</span><span class="k">\hline</span>
+    開催回 <span class="p">&amp;</span> 会場 <span class="p">&amp;</span> 参加料<span class="k">\\</span> <span class="k">\hline</span>
+    第1回 <span class="p">&amp;</span> 東京 <span class="p">&amp;</span> 3000円<span class="k">\\</span> <span class="k">\hline</span>
+    第2回 <span class="p">&amp;</span> 大阪 <span class="p">&amp;</span> 2500円<span class="k">\\</span> <span class="k">\hline</span>
+  <span class="nt">\end{tabular}</span>
+<span class="nt">\end{table}</span>
+</pre></table></code></div></div><p>表にもキャプションやラベルをつけることができます．</p><div class="language-tex highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre><span class="nt">\begin{table}</span>[h]
+  <span class="k">\centering</span>
+  <span class="k">\caption</span><span class="p">{</span>過去の開催情報<span class="p">}</span>
+  <span class="k">\label</span><span class="p">{</span>tbl:info<span class="p">}</span>
+  <span class="nt">\begin{tabular}</span><span class="p">{</span>|c|l|r|<span class="p">}</span><span class="k">\hline</span>
+    開催回 <span class="p">&amp;</span> 会場 <span class="p">&amp;</span> 参加料<span class="k">\\</span> <span class="k">\hline</span>
+    第1回 <span class="p">&amp;</span> 東京 <span class="p">&amp;</span> 3000円<span class="k">\\</span> <span class="k">\hline</span>
+    第2回 <span class="p">&amp;</span> 大阪 <span class="p">&amp;</span> 2500円<span class="k">\\</span> <span class="k">\hline</span>
+  <span class="nt">\end{tabular}</span>
+<span class="nt">\end{table}</span>
+</pre></table></code></div></div><p>セルは結合することができます． これについては別記事で説明する予定です． 投稿まで今しばらくお待ちください．</p><h1 id="今後の投稿予定">今後の投稿予定</h1><p>これから何本かTeXに関する記事を投稿していきます． 以下は予定している記事の一覧です．</p><ul><li>Beamerを用いたスライド資料作成<li>表組みのセルの結合<li>成果物からソースを見ていく</ul><hr /><div class="footnotes" role="doc-endnotes"><ol><li id="fn:displaystyle" role="doc-endnote"><p>インライン数式では簡略化されて表示されるため，意図的にブロック形式にする方法．<a href="https://a-habakiri.hateblo.jp/entry/2016/12/25/003000">参考</a>． <a href="#fnref:displaystyle" class="reversefootnote" role="doc-backlink">&#8617;</a></p></ol></div></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/blogging/'>Blogging</a>, <a href='/categories/tutorial/'>Tutorial</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/latex/" class="post-tag no-text-decoration" >LaTeX</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=【LaTeX】基本文法のまとめ - Kmhk.N&url=https://kmhk-naka.github.io/posts/latex-introduction/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=【LaTeX】基本文法のまとめ - Kmhk.N&u=https://kmhk-naka.github.io/posts/latex-introduction/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=【LaTeX】基本文法のまとめ - Kmhk.N&url=https://kmhk-naka.github.io/posts/latex-introduction/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-lastmod" class="post"> <span>Recent Update</span><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/slack-sdk-from-python/">Python用 Slack公式 SDK の slack_sdk を使ってシミュレーション終了の通知を画像とともにお知らせする</a><li><a href="/posts/VSCode-extensions/">VSCodeを使うならとりあえずインストールしてほしい拡張機能と設定変更</a><li><a href="/posts/neuroevolution-of-augmented-reservoirs/">【論文読み】Adaptive reservoir computing through evolution and learning</a><li><a href="/posts/neuroevolution-of-hierarchical-reservoir-computers/">【論文読み】Neuroevolution of Hierarchical Reservoir Computers</a><li><a href="/posts/OpenCV-capture-frames/">【Python】OpenCVでキャプチャしたフレームを保存する</a></ul></div><div id="access-tags"> <span>Trending Tags</span><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/python/">Python</a> <a class="post-tag" href="/tags/neuroevolution/">Neuroevolution</a> <a class="post-tag" href="/tags/%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92/">強化学習</a> <a class="post-tag" href="/tags/hyperneat/">HyperNEAT</a> <a class="post-tag" href="/tags/neat/">NEAT</a> <a class="post-tag" href="/tags/reservoir-computing/">Reservoir Computing</a> <a class="post-tag" href="/tags/argparse/">argparse</a> <a class="post-tag" href="/tags/atari/">Atari</a> <a class="post-tag" href="/tags/command/">command</a> <a class="post-tag" href="/tags/cppns/">CPPNs</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"> <span class="pl-3 pt-2 mb-2">Contents</span><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/IntelliJ-Kotlin-plus-JavaFX11/"><div class="card-body"> <span class="timeago small" > Dec 14, 2020 <i class="unloaded">2020-12-14T15:15:00+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>IntelliJでKotlinとJavaFX 11を使った開発環境の構築</h3><div class="text-muted small"><p> Java SDK 11からJavaFXが切り離された JavaFXはJDK 11からスタンドアローンなモジュールとして配布されるようになりました． そのため，JDKとは別にインストールする必要があります． インストールについては以下のドキュメントを参照してください． Getting Started with JavaFX 環境情報 Xubuntu 20.04 Inte...</p></div></div></a></div><div class="card"> <a href="/posts/OpenCV-capture-frames/"><div class="card-body"> <span class="timeago small" > Jan 20 <i class="unloaded">2021-01-20T19:51:00+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>【Python】OpenCVでキャプチャしたフレームを保存する</h3><div class="text-muted small"><p> はじめに Object Detectionをやりたくて，そのための訓練データを集めるためにWebカメラで撮影することにしました． その際に作成したコードを公開しようと思います． 本稿では，OpenCVが利用可能な状態を前提としていて，環境構築については説明しませんのでご了承ください． 実行環境 Ubuntu 20.04 LTS Python 3.8.5 opencv-py...</p></div></div></a></div><div class="card"> <a href="/posts/poetry/"><div class="card-body"> <span class="timeago small" > May 15, 2020 <i class="unloaded">2020-05-15T00:00:00+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>PipenvからPoetryに移行してみた</h3><div class="text-muted small"><p> Poetry vs Pipenv PoetryとPipenvのDX(Developer Experience)に関する所感を次の表にまとめました． 項目 Poetry Pipenv ログなどの見やすさ 😄 😊 パッケージ追加などの速度 ...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/supervised-and-evolutionary-learning-of-ESN/" class="btn btn-outline-primary" prompt="Older"><p>【論文読み】Supervised and Evolutionary Learning of Echo State Networks</p></a> <a href="/posts/deep-planning-network/" class="btn btn-outline-primary" prompt="Newer"><p>【論文読み】Learning Latent Dynamics for Planning from Pixels</p></a></div></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="https://github.com/kmhk-naka">Kimihiko Nakahara</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/python/">Python</a> <a class="post-tag" href="/tags/neuroevolution/">Neuroevolution</a> <a class="post-tag" href="/tags/%E5%BC%B7%E5%8C%96%E5%AD%A6%E7%BF%92/">強化学習</a> <a class="post-tag" href="/tags/hyperneat/">HyperNEAT</a> <a class="post-tag" href="/tags/neat/">NEAT</a> <a class="post-tag" href="/tags/reservoir-computing/">Reservoir Computing</a> <a class="post-tag" href="/tags/argparse/">argparse</a> <a class="post-tag" href="/tags/atari/">Atari</a> <a class="post-tag" href="/tags/command/">command</a> <a class="post-tag" href="/tags/cppns/">CPPNs</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="https://kmhk-naka.github.io{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script>
