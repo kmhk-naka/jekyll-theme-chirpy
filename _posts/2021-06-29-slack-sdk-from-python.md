@@ -100,4 +100,4 @@ PythonからSlackに通知するためのライブラリがたくさんありま
 # 参考文献
 - [公式ドキュメント](https://slack.dev/python-slack-sdk/)
 - [APIドキュメント](https://slack.dev/python-slack-sdk/api-docs/slack_sdk)
-- [日本語のチュートリアル記事]((https://qiita.com/seratch/items/8f93fd0bf815b0b1d557))
+- [日本語のチュートリアル記事](https://qiita.com/seratch/items/8f93fd0bf815b0b1d557)
